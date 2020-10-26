@@ -1,4 +1,13 @@
 format_version: 9
+environments:
+  testing:
+    environment_variables:
+      DEPLOYMENT: testing
+    secure_variables:
+      ENV_PASSWORD: "s&Du#@$xsSa"
+    pipelines:
+      - example-deploy-testing
+      - build-testing
 pipelines:
   mypipe1: # definition of mypipe1 pipeline
     group: mygroup # note that the group name can contain only of alphanumeric & underscore characters
@@ -12,6 +21,11 @@ pipelines:
         # keyword git says about type of material and url at once
         git: http://my.example.org/mygit.git
         branch: ci
+      myupstream: # this name does not matter, but there should be no 2 materials with the same name
+        # type is optional here, material type is implied based on presence of pipeline and stage fields
+        # type: dependency
+        pipeline: pipe2
+        stage: test
     stages: # list of stages in order
       - build: # name of stage
           clean_workspace: true
@@ -32,7 +46,7 @@ pipelines:
                 report: test-reports/index.html
               tasks: # ordered list of tasks to execute in job csharp
                - fetch:
-                   pipeline: pipe1
+                   pipeline: pipe2
                    stage: build
                    job: test
                    source: test-bin/
