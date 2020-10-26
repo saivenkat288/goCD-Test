@@ -32,7 +32,7 @@ pipelines:
                 report: test-reports/index.html
               tasks: # ordered list of tasks to execute in job csharp
                - fetch:
-                   pipeline: pipe2
+                   pipeline: pipe1
                    stage: build
                    job: test
                    source: test-bin/
