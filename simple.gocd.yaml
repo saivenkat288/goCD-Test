@@ -13,9 +13,7 @@ pipelines:
               tasks:
                - exec: # indicates type of task
                    command: python
-                   arg: 
-                     -simple.py
+                   arg: simple.py
                - exec: # indicates type of task
-                   command: /usr/bin/python
-                   arg: 
-                     -abc.py
+                   command: python
+                   arg: abc.py
