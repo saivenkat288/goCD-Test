@@ -10,14 +10,14 @@ pipelines:
     materials:
       mygit:  # this is the name of material
         # says about type of material and url at once
-        git: http://my.example.org/mygit.git
+        git: https://github.com/saivenkat288/goCD-Test
     stages:
       - build: # name of stage
           jobs:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: make
+                   command: echo "Hello world"
   "yaml-example": # definition of yaml-example pipeline
     group: yaml-example
     label_template: "${mygit[:8]}"
@@ -25,13 +25,8 @@ pipelines:
     materials:
       mygit: # this is the name of material
         # keyword git says about type of material and url at once
-        git: http://my.example.org/mygit.git
-        branch: ci
-      upstream:
-        # type is optional here, material type is implied based on presence of pipeline and stage fields
-        # type: dependency
-        pipeline: yamlpipe1
-        stage: build
+        git: https://github.com/saivenkat288/goCD-Test
+        branch: main
     stages: # list of stages in order
       - build: # name of stage
           clean_workspace: true
