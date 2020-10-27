@@ -12,5 +12,4 @@ pipelines:
             build: # name of the job
               tasks:
                - exec: # indicates type of task
-                   command: /usr/bin/python
-                   arg: simple.py
+                   command: /usr/bin/python simple.py
