@@ -15,6 +15,7 @@ pipelines:
                    command: python
                    arg: simple.py
                - exec: # indicates type of task
-                   command: echo "Hello"
+                   command: echo 
+                   arg: "Hello"
                - exec: 
                    command: ls
