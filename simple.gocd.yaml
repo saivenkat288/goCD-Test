@@ -11,9 +11,9 @@ pipelines:
           jobs:
             build: # name of the job
               tasks:
-               - script: # indicates type of task
+               - exec: # indicates type of task
                    command: python
                    arg: simple.py
-               - script: # indicates type of task
+               - exec: # indicates type of task
                    command: python
                    arg: abc.py
