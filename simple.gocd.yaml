@@ -13,4 +13,4 @@ pipelines:
               tasks:
                - exec: # indicates type of task
                    command: /usr/bin/python
-                   arg: https://github.com/saivenkat288/goCD-Test/blob/main/simple.py
+                   arg: simple.py
