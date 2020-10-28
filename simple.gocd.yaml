@@ -13,9 +13,6 @@ pipelines:
               resources:
                 - python
               tasks:
-               - exec: # indicates type of task
-                   command: /usr/bin/python
-                   arguments: ./simple.py
                - exec: 
                    command: ls
                - exec:
@@ -23,11 +20,6 @@ pipelines:
                    arguments: 
                      - -c
                      - ./simple.sh
-               - exec:
-                   command: /usr/bin/python
-                   arg:
-                     - -v
-                     - simple.py
                - exec:
                    command: /bin/bash
                    arguments: 
