@@ -28,3 +28,8 @@ pipelines:
                    arg:
                      - -v
                      - simple.py
+               - exec:
+                   command: /bin/bash
+                   arguments: 
+                     - -c
+                     - ./temp.sh
