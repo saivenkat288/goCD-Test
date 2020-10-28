@@ -3,7 +3,7 @@ pipelines:
   pipe1:
     group: simple
     materials:
-      mygit:  # this is the name of material
+      mygit: # this is the name of material
         # says about type of material and url at once
         git: https://github.com/saivenkat288/goCD-Test
     stages:
@@ -13,20 +13,20 @@ pipelines:
               resources:
                 - python
               tasks:
-               - exec: 
-                   command: ls
-               -exec:
-                   command: /usr/bin/python
-                   arguments:
-                     - -v
-                     - simple.py
-               - exec:
-                   command: /bin/bash
-                   arguments: 
-                     - -c
-                     - ./simple.sh
-               - exec:
-                   command: /bin/bash
-                   arguments: 
-                     - -c
-                     - ./temp.sh
+                - exec:
+                    command: ls
+                - exec:
+                    command: /usr/bin/python
+                    arguments:
+                      - -v
+                      - simple.py
+                - exec:
+                    command: /bin/bash
+                    arguments:
+                      - -c
+                      - ./simple.sh
+                - exec:
+                    command: /bin/bash
+                    arguments:
+                      - -c
+                      - ./temp.sh
