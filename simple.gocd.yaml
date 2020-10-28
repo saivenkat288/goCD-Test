@@ -20,13 +20,3 @@ pipelines:
                     arguments:
                       - -v
                       - simple.py
-                - exec:
-                    command: /bin/bash
-                    arguments:
-                      - -c
-                      - ./simple.sh
-                - exec:
-                    command: /bin/bash
-                    arguments:
-                      - -c
-                      - ./temp.sh
