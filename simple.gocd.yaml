@@ -1,23 +1,32 @@
-environments:
-  env1:
-    environment_variables:
-      EXAMPLE_DEPLOYMENT: testing
-    pipelines:
-      - pipe1
+# simple.gocd.yaml
 pipelines:
   pipe1:
-    group: group1
+    group: simple
     materials:
-      mygit: # this is the name of material
+      mygit:  # this is the name of material
         # says about type of material and url at once
         git: https://github.com/saivenkat288/goCD-Test
-        branch: main
     stages:
-      - stage1: # name of stage
+      - build: # name of stage
           jobs:
-            job1: # name of the job
-            tasks:
-              - exec: # indicates type of task
-                  command: echo "Hello"
-              - exec:
-                  command: echo "world"
+            build: # name of the job
+              resources:
+                - python
+              tasks:
+               - exec: 
+                   command: ls
+               -exec:
+                   command: /usr/bin/python
+                   arguments:
+                     - -v
+                     - simple.py
+               - exec:
+                   command: /bin/bash
+                   arguments: 
+                     - -c
+                     - ./simple.sh
+               - exec:
+                   command: /bin/bash
+                   arguments: 
+                     - -c
+                     - ./temp.sh
