@@ -15,6 +15,11 @@ pipelines:
               tasks:
                - exec: 
                    command: ls
+               -exec:
+                   command: /usr/bin/python
+                   arguments:
+                     - -v
+                     - simple.py
                - exec:
                    command: /bin/bash
                    arguments: 
