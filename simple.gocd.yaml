@@ -10,15 +10,19 @@ pipelines:
       - build: # name of stage
           jobs:
             build: # name of the job
+              resources:
+                - python
               tasks:
                - exec: # indicates type of task
                    command: /usr/bin/python
-                   arg: simple.py
+                   arguments: ./simple.py
                - exec: 
                    command: ls
                - exec:
                    command: /bin/bash
-                   arg: simple.sh
+                   arguments: 
+                     - -c
+                     - ./simple.sh
                - exec:
                    command: /usr/bin/python
                    arg:
