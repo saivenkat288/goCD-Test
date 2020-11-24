@@ -1,7 +1,7 @@
 #Initializing two variables 
 b="training"
   
-if [ $LABEL == $b ] 
+if [[ "$LABEL" == "$b" ]] 
 then 
     /home/ubuntu/anaconda3/bin/mlflow run .
 else
