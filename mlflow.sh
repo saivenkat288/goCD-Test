@@ -1,5 +1,5 @@
 #Initializing two variables 
-b="training"
+b="Training"
   
 if [[ "$LABEL" == "$b" ]] 
 then 
