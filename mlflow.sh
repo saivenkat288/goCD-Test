@@ -1,7 +1,7 @@
 echo $LABEL
-if $LABEL=="Training"
+if [$LABEL=="Training"]
 then 
-    #execute command
+    echo "Inside then"
 else
-    #execute command
+    echo "Inside else"
 fi
