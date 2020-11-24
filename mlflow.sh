@@ -1,5 +1,6 @@
 a="Training"
-if [$LABEL==$a]
+LABEL= "Training"
+if [$LABEL == $a]
 then 
     /home/ubuntu/anaconda3/bin/mlflow run .
 else
