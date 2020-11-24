@@ -1,8 +1,13 @@
-a="Training"
-LABEL= "Training"
-if [$LABEL == $a]
+#Initializing two variables 
+a=20 
+b=20 
+  
+if [ $a == $b ] 
 then 
-    /home/ubuntu/anaconda3/bin/mlflow run .
+    #If they are equal then print this 
+    echo "a is equal to b"
+    #/home/ubuntu/anaconda3/bin/mlflow run .
 else
-    echo "Inside else"
+    #else print this 
+    echo "a is not equal to b"
 fi
